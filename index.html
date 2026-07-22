@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SoftKing | Soporte y Desarrollo</title>
+<meta name="description" content="SoftKing - Servicios digitales para empresas y emprendedores. Soporte técnico y desarrollo web.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-fx" aria-hidden="true">
+  <div class="bg-fx__photo"></div>
+  <div class="bg-fx__scrim"></div>
+  <pre class="code-snippet code-snippet--1">&lt;header&gt;
+  &lt;nav&gt;
+    &lt;div class="logo"&gt;SoftKing&lt;/div&gt;
+    &lt;ul class="nav-links"&gt;
+      &lt;li&gt;&lt;a href="#servicios"&gt;Servicios&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#contacto"&gt;Contacto&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;</pre>
+  <pre class="code-snippet code-snippet--2">.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.hero {
+  background-image: url(...);
+  background-size: cover;
+}</pre>
+</div>
+
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a href="#inicio" class="brand">
+      <svg class="brand__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="5" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="32" y1="32" x2="32" y2="10"/>
+          <line x1="32" y1="32" x2="50" y2="20"/>
+          <line x1="32" y1="32" x2="50" y2="44"/>
+          <line x1="32" y1="32" x2="32" y2="54"/>
+          <line x1="32" y1="32" x2="14" y2="44"/>
+          <line x1="32" y1="32" x2="14" y2="20"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="32" cy="10" r="3.5"/>
+          <circle cx="50" cy="20" r="3.5"/>
+          <circle cx="50" cy="44" r="3.5"/>
+          <circle cx="32" cy="54" r="3.5"/>
+          <circle cx="14" cy="44" r="3.5"/>
+          <circle cx="14" cy="20" r="3.5"/>
+        </g>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">SOFT<b>KING</b></span>
+        <span class="brand__tag">SOPORTE &amp; DESARROLLO</span>
+      </span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <ul class="nav__links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn--whatsapp navbar__cta" href="https://wa.me/56948917116" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 4.99L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2m0 1.8c2.16 0 4.19.84 5.71 2.37a8.05 8.05 0 0 1 2.37 5.74c0 4.47-3.64 8.11-8.11 8.11a8.1 8.1 0 0 1-4.13-1.13l-.3-.17-3.12.82.83-3.04-.19-.31a8.08 8.08 0 0 1-1.24-4.31c0-4.47 3.64-8.08 8.18-8.08M8.53 7.06c-.17 0-.45.06-.68.32-.24.25-.9.88-.9 2.15 0 1.27.92 2.49 1.05 2.67.13.17 1.79 2.84 4.4 3.87 2.18.86 2.62.69 3.1.65.48-.04 1.55-.63 1.77-1.24s.22-1.13.15-1.24c-.06-.11-.24-.17-.5-.3-.26-.13-1.55-.77-1.79-.85-.24-.09-.41-.13-.59.13-.17.25-.68.85-.83 1.03-.15.17-.31.19-.57.06-.26-.13-1.1-.4-2.1-1.29-.78-.69-1.3-1.55-1.46-1.81-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.59-1.44-.82-1.96-.21-.51-.43-.44-.59-.45z"/></svg>
+      Contáctanos
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section id="inicio" class="hero">
+    <div class="container hero__inner">
+      <p class="eyebrow">Soporte técnico &amp; desarrollo web</p>
+      <h1 class="hero__title">SERVICIOS<br>DIGITALES</h1>
+      <p class="hero__subtitle">PARA EMPRESAS Y EMPRENDEDORES</p>
+
+      <p class="hero__desc">
+        Mantenemos tus equipos funcionando y llevamos tu negocio a internet.
+        Soporte TI y sitios web hechos a medida, con atención directa por WhatsApp.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--whatsapp" href="https://wa.me/56948917116" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 4.99L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2m0 1.8c2.16 0 4.19.84 5.71 2.37a8.05 8.05 0 0 1 2.37 5.74c0 4.47-3.64 8.11-8.11 8.11a8.1 8.1 0 0 1-4.13-1.13l-.3-.17-3.12.82.83-3.04-.19-.31a8.08 8.08 0 0 1-1.24-4.31c0-4.47 3.64-8.08 8.18-8.08M8.53 7.06c-.17 0-.45.06-.68.32-.24.25-.9.88-.9 2.15 0 1.27.92 2.49 1.05 2.67.13.17 1.79 2.84 4.4 3.87 2.18.86 2.62.69 3.1.65.48-.04 1.55-.63 1.77-1.24s.22-1.13.15-1.24c-.06-.11-.24-.17-.5-.3-.26-.13-1.55-.77-1.79-.85-.24-.09-.41-.13-.59.13-.17.25-.68.85-.83 1.03-.15.17-.31.19-.57.06-.26-.13-1.1-.4-2.1-1.29-.78-.69-1.3-1.55-1.46-1.81-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.59-1.44-.82-1.96-.21-.51-.43-.44-.59-.45z"/></svg>
+          Cotiza por WhatsApp
+        </a>
+        <a class="btn btn--ghost" href="https://instagram.com/_softking" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.42.46.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.24.64.41 1.36.46 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.42a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.24-1.36.41-2.43.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.42-.46a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.24-.64-.41-1.36-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.46-2.42.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.44 2.5c.64-.24 1.36-.41 2.43-.46C8.94 2.01 9.28 2 12 2m0 1.8c-2.67 0-2.99.01-4.04.06-.87.04-1.34.18-1.65.3-.42.16-.71.35-1.02.66-.31.31-.5.6-.66 1.02-.12.31-.26.78-.3 1.65C4.28 8.53 4.27 8.85 4.27 12s.01 3.47.06 4.51c.04.87.18 1.34.3 1.65.16.42.35.71.66 1.02.31.31.6.5 1.02.66.31.12.78.26 1.65.3 1.04.05 1.37.06 4.04.06s3-.01 4.04-.06c.87-.04 1.34-.18 1.65-.3.42-.16.71-.35 1.02-.66.31-.31.5-.6.66-1.02.12-.31.26-.78.3-1.65.05-1.04.06-1.37.06-4.51s-.01-3.47-.06-4.51c-.04-.87-.18-1.34-.3-1.65a2.7 2.7 0 0 0-.66-1.02 2.7 2.7 0 0 0-1.02-.66c-.31-.12-.78-.26-1.65-.3C15 3.81 14.67 3.8 12 3.8m0 3.06a5.14 5.14 0 1 1 0 10.28 5.14 5.14 0 0 1 0-10.28m0 1.8a3.34 3.34 0 1 0 0 6.68 3.34 3.34 0 0 0 0-6.68m5.34-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0"/></svg>
+          @_softking
+        </a>
+      </div>
+
+      <div class="hero__cards">
+        <div class="feature-card">
+          <h3 class="feature-card__title">Soporte</h3>
+          <ul>
+            <li>Antivirus</li>
+            <li>Formateo de PC</li>
+            <li>Instalación de Office 365</li>
+            <li>Mantenimiento general</li>
+          </ul>
+        </div>
+        <div class="feature-card">
+          <h3 class="feature-card__title">Web</h3>
+          <ul>
+            <li>Sitios corporativos</li>
+            <li>Landing pages</li>
+            <li>Web para restaurantes</li>
+            <li>Web inmobiliaria</li>
+            <li>Sitios informativos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicios" class="section">
+    <div class="container">
+      <p class="section__eyebrow">Lo que hacemos</p>
+      <h2 class="section__title">Nuestros servicios</h2>
+
+      <div class="services-grid">
+        <article class="service-panel">
+          <div class="service-panel__head">
+            <span class="service-panel__badge">01</span>
+            <h3>Soporte técnico</h3>
+          </div>
+          <ul class="service-panel__list">
+            <li>Antivirus y seguridad</li>
+            <li>Formateo de PC</li>
+            <li>Instalación de Office 365</li>
+            <li>Mantenimiento general</li>
+          </ul>
+          <a class="service-panel__link" href="https://wa.me/56948917116" target="_blank" rel="noopener">Solicitar soporte →</a>
+        </article>
+
+        <article class="service-panel">
+          <div class="service-panel__head">
+            <span class="service-panel__badge">02</span>
+            <h3>Desarrollo web</h3>
+          </div>
+          <ul class="service-panel__list">
+            <li>Sitios corporativos</li>
+            <li>Landing pages</li>
+            <li>Web para restaurantes</li>
+            <li>Web inmobiliaria</li>
+            <li>Sitios informativos</li>
+          </ul>
+          <a class="service-panel__link" href="https://wa.me/56948917116" target="_blank" rel="noopener">Cotizar sitio web →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="section section--alt">
+    <div class="container about">
+      <div class="about__text">
+        <p class="section__eyebrow">Quiénes somos</p>
+        <h2 class="section__title">SoftKing</h2>
+        <p class="placeholder-note">[ Contenido por definir — cuéntame la historia, misión o diferenciales de SoftKing y lo dejamos aquí. ]</p>
+      </div>
+      <div class="about__stats">
+        <div class="stat"><span class="stat__num">--</span><span class="stat__label">Clientes atendidos</span></div>
+        <div class="stat"><span class="stat__num">--</span><span class="stat__label">Proyectos entregados</span></div>
+        <div class="stat"><span class="stat__num">--</span><span class="stat__label">Años de experiencia</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="portafolio" class="section">
+    <div class="container">
+      <p class="section__eyebrow">Trabajos realizados</p>
+      <h2 class="section__title">Portafolio</h2>
+
+      <div class="portfolio-grid">
+        <div class="portfolio-card portfolio-card--empty">
+          <span>Próximamente</span>
+        </div>
+        <div class="portfolio-card portfolio-card--empty">
+          <span>Próximamente</span>
+        </div>
+        <div class="portfolio-card portfolio-card--empty">
+          <span>Próximamente</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section section--contact">
+    <div class="container contact">
+      <p class="section__eyebrow">Hablemos</p>
+      <h2 class="section__title">¿Tienes un proyecto o un equipo con problemas?</h2>
+      <p class="contact__desc">Escríbenos y te respondemos directo por WhatsApp.</p>
+
+      <div class="contact__actions">
+        <a class="btn btn--whatsapp btn--lg" href="https://wa.me/56948917116" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.48 1.32 4.99L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2m0 1.8c2.16 0 4.19.84 5.71 2.37a8.05 8.05 0 0 1 2.37 5.74c0 4.47-3.64 8.11-8.11 8.11a8.1 8.1 0 0 1-4.13-1.13l-.3-.17-3.12.82.83-3.04-.19-.31a8.08 8.08 0 0 1-1.24-4.31c0-4.47 3.64-8.08 8.18-8.08M8.53 7.06c-.17 0-.45.06-.68.32-.24.25-.9.88-.9 2.15 0 1.27.92 2.49 1.05 2.67.13.17 1.79 2.84 4.4 3.87 2.18.86 2.62.69 3.1.65.48-.04 1.55-.63 1.77-1.24s.22-1.13.15-1.24c-.06-.11-.24-.17-.5-.3-.26-.13-1.55-.77-1.79-.85-.24-.09-.41-.13-.59.13-.17.25-.68.85-.83 1.03-.15.17-.31.19-.57.06-.26-.13-1.1-.4-2.1-1.29-.78-.69-1.3-1.55-1.46-1.81-.15-.26-.02-.4.11-.53.12-.12.26-.31.39-.47.13-.15.17-.26.26-.43.09-.17.04-.32-.02-.45-.06-.13-.59-1.44-.82-1.96-.21-.51-.43-.44-.59-.45z"/></svg>
+          +56 9 4891 7116
+        </a>
+        <a class="btn btn--ghost btn--lg" href="https://instagram.com/_softking" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.42.46.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.24.64.41 1.36.46 2.43.05 1.06.06 1.4.06 4.12s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.46 2.42a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.24-1.36.41-2.43.46-1.06.05-1.4.06-4.12.06s-3.06-.01-4.12-.06c-1.06-.05-1.79-.22-2.42-.46a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.24-.64-.41-1.36-.46-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.46-2.42.26-.66.6-1.22 1.15-1.77A4.9 4.9 0 0 1 5.44 2.5c.64-.24 1.36-.41 2.43-.46C8.94 2.01 9.28 2 12 2m0 1.8c-2.67 0-2.99.01-4.04.06-.87.04-1.34.18-1.65.3-.42.16-.71.35-1.02.66-.31.31-.5.6-.66 1.02-.12.31-.26.78-.3 1.65C4.28 8.53 4.27 8.85 4.27 12s.01 3.47.06 4.51c.04.87.18 1.34.3 1.65.16.42.35.71.66 1.02.31.31.6.5 1.02.66.31.12.78.26 1.65.3 1.04.05 1.37.06 4.04.06s3-.01 4.04-.06c.87-.04 1.34-.18 1.65-.3.42-.16.71-.35 1.02-.66.31-.31.5-.6.66-1.02.12-.31.26-.78.3-1.65.05-1.04.06-1.37.06-4.51s-.01-3.47-.06-4.51c-.04-.87-.18-1.34-.3-1.65a2.7 2.7 0 0 0-.66-1.02 2.7 2.7 0 0 0-1.02-.66c-.31-.12-.78-.26-1.65-.3C15 3.81 14.67 3.8 12 3.8m0 3.06a5.14 5.14 0 1 1 0 10.28 5.14 5.14 0 0 1 0-10.28m0 1.8a3.34 3.34 0 1 0 0 6.68 3.34 3.34 0 0 0 0-6.68m5.34-1.99a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0"/></svg>
+          /_softking
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <a href="#inicio" class="brand brand--footer">
+      <svg class="brand__icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="32" cy="32" r="5" fill="currentColor"/>
+        <g stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="32" y1="32" x2="32" y2="10"/>
+          <line x1="32" y1="32" x2="50" y2="20"/>
+          <line x1="32" y1="32" x2="50" y2="44"/>
+          <line x1="32" y1="32" x2="32" y2="54"/>
+          <line x1="32" y1="32" x2="14" y2="44"/>
+          <line x1="32" y1="32" x2="14" y2="20"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="32" cy="10" r="3.5"/>
+          <circle cx="50" cy="20" r="3.5"/>
+          <circle cx="50" cy="44" r="3.5"/>
+          <circle cx="32" cy="54" r="3.5"/>
+          <circle cx="14" cy="44" r="3.5"/>
+          <circle cx="14" cy="20" r="3.5"/>
+        </g>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__name">SOFT<b>KING</b></span>
+        <span class="brand__tag">SOPORTE &amp; DESARROLLO</span>
+      </span>
+    </a>
+
+    <div class="footer__links">
+      <a href="https://instagram.com/_softking" target="_blank" rel="noopener">Instagram · @_softking</a>
+      <a href="https://wa.me/56948917116" target="_blank" rel="noopener">WhatsApp · +56 9 4891 7116</a>
+    </div>
+
+    <p class="footer__copy">© <span id="year"></span> SoftKing. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
