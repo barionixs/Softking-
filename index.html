@@ -46,7 +46,7 @@
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
@@ -172,21 +172,76 @@
     </div>
   </section>
 
-  <section id="portafolio" class="section">
+  <section id="blog" class="section">
     <div class="container">
-      <p class="section__eyebrow">Trabajos realizados</p>
-      <h2 class="section__title">Portafolio</h2>
+      <p class="section__eyebrow">Blog técnico</p>
+      <h2 class="section__title">Fallas comunes y sus causas</h2>
+      <p class="section__desc">Guías rápidas para reconocer, entender y solucionar los problemas más frecuentes en equipos, redes y sitios web.</p>
 
-      <div class="portfolio-grid">
-        <div class="portfolio-card portfolio-card--empty">
-          <span>Próximamente</span>
-        </div>
-        <div class="portfolio-card portfolio-card--empty">
-          <span>Próximamente</span>
-        </div>
-        <div class="portfolio-card portfolio-card--empty">
-          <span>Próximamente</span>
-        </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <img class="blog-card__img" src="assets/img/blog/bsod.jpg" alt="Pantalla azul de Windows (BSOD)" loading="lazy">
+          <div class="blog-card__body">
+            <div class="blog-card__head">
+              <span class="blog-card__tag">Hardware / Software</span>
+              <span class="blog-card__date">10 jul 2026</span>
+            </div>
+            <h3 class="blog-card__title">Pantalla azul (BSOD): ¿cuándo preocuparte?</h3>
+            <p class="blog-card__excerpt">Si es un caso aislado, no es grave. Si se repite, es una señal de alarma.</p>
+            <details class="blog-card__details">
+              <summary>Leer más</summary>
+              <p>Causas típicas: drivers desactualizados, RAM defectuosa o sobrecalentamiento. Si se repite en varios días, actualiza drivers, revisa temperaturas y respalda tus archivos.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img class="blog-card__img" src="assets/img/blog/slow-pc.jpg" alt="Persona frustrada frente a un computador lento" loading="lazy">
+          <div class="blog-card__body">
+            <div class="blog-card__head">
+              <span class="blog-card__tag">Software</span>
+              <span class="blog-card__date">02 jul 2026</span>
+            </div>
+            <h3 class="blog-card__title">Tu PC arranca cada vez más lento</h3>
+            <p class="blog-card__excerpt">No es que "el equipo ya está viejo": casi siempre hay una causa puntual.</p>
+            <details class="blog-card__details">
+              <summary>Leer más</summary>
+              <p>Suele deberse a demasiados programas al inicio, disco casi lleno o malware en segundo plano. Revisar el administrador de tareas y limpiar lo innecesario devuelve la velocidad sin gastar en hardware.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img class="blog-card__img" src="assets/img/blog/no-power.jpg" alt="Interior de un computador de escritorio abierto" loading="lazy">
+          <div class="blog-card__body">
+            <div class="blog-card__head">
+              <span class="blog-card__tag">Hardware</span>
+              <span class="blog-card__date">24 jun 2026</span>
+            </div>
+            <h3 class="blog-card__title">Tu equipo no enciende: primeros pasos</h3>
+            <p class="blog-card__excerpt">Antes de entrar en pánico, descarta las causas más simples y comunes.</p>
+            <details class="blog-card__details">
+              <summary>Leer más</summary>
+              <p>Revisa cable, enchufe y fuente de poder, y en notebooks el cargador o batería. Si nada funciona, probablemente sea una falla interna que requiere revisión técnica.</p>
+            </details>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <img class="blog-card__img" src="assets/img/blog/wifi.jpg" alt="Router WiFi sobre fondo amarillo" loading="lazy">
+          <div class="blog-card__body">
+            <div class="blog-card__head">
+              <span class="blog-card__tag">Redes</span>
+              <span class="blog-card__date">15 jun 2026</span>
+            </div>
+            <h3 class="blog-card__title">WiFi que se cae a cada rato</h3>
+            <p class="blog-card__excerpt">Casi nunca es el proveedor: suele estar en el router o su ubicación.</p>
+            <details class="blog-card__details">
+              <summary>Leer más</summary>
+              <p>Interferencia, firmware desactualizado o mala ubicación son las causas más comunes. Reiniciar el router, actualizar su firmware y alejarlo de muros gruesos resuelve la mayoría de los cortes.</p>
+            </details>
+          </div>
+        </article>
       </div>
     </div>
   </section>
