@@ -1,49 +1,49 @@
 /* ===== Fonts ===== */
 @font-face {
   font-family: "Geoform";
-  src: url("assets/fonts/Geoform.otf") format("opentype");
+  src: url("/fonts/Geoform.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Geoform";
-  src: url("assets/fonts/Geoform-Light.otf") format("opentype");
+  src: url("/fonts/Geoform-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Geoform";
-  src: url("assets/fonts/Geoform-Bold.otf") format("opentype");
+  src: url("/fonts/Geoform-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Geoform";
-  src: url("assets/fonts/Geoform-Bold.otf") format("opentype");
+  src: url("/fonts/Geoform-Bold.otf") format("opentype");
   font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "DK Longreach";
-  src: url("assets/fonts/DK-Longreach.otf") format("opentype");
+  src: url("/fonts/DK-Longreach.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Courier Mono";
-  src: url("assets/fonts/cour.ttf") format("truetype");
+  src: url("/fonts/cour.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Courier Mono";
-  src: url("assets/fonts/courbd.ttf") format("truetype");
+  src: url("/fonts/courbd.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -66,7 +66,7 @@
   --font-display: "Geoform", "Archivo Black", sans-serif;
   --font-brand: "DK Longreach", "Geoform", sans-serif;
   --font-mono: "Courier Mono", "Courier New", monospace;
-  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: var(--font-inter), -apple-system, BlinkMacSystemFont, sans-serif;
   --container: 1140px;
 }
 
