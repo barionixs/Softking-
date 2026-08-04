@@ -77,40 +77,78 @@ export function Hero() {
   return (
     <section id="inicio" className="hero">
       <div className="container hero__inner">
-        <p className="eyebrow">Soporte técnico &amp; desarrollo web</p>
-        <h1 className="hero__title">
-          SERVICIOS
-          <br />
-          DIGITALES
-        </h1>
-        <p className="hero__subtitle">PARA EMPRESAS Y EMPRENDEDORES</p>
+        <div className="hero__content">
+          <p className="eyebrow">Soporte técnico &amp; desarrollo web</p>
+          <h1 className="hero__title">
+            SERVICIOS
+            <br />
+            DIGITALES
+          </h1>
+          <p className="hero__subtitle">PARA EMPRESAS Y EMPRENDEDORES</p>
 
-        <p className="hero__desc">
-          Mantenemos tus equipos funcionando y llevamos tu negocio a
-          internet. Soporte TI y sitios web hechos a medida, con atención
-          directa por WhatsApp.
-        </p>
+          <p className="hero__desc">
+            Mantenemos tus equipos funcionando y llevamos tu negocio a
+            internet. Soporte TI y sitios web hechos a medida, con atención
+            directa por WhatsApp.
+          </p>
 
-        <div className="hero__actions">
+          <div className="hero__actions">
+            <a
+              className="btn btn--whatsapp"
+              href="https://wa.me/56948917116"
+              target="_blank"
+              rel="noopener"
+            >
+              <WhatsappIcon size={20} />
+              Cotiza por WhatsApp
+            </a>
+            <a
+              className="btn btn--ghost"
+              href="https://instagram.com/_softking"
+              target="_blank"
+              rel="noopener"
+            >
+              <InstagramIcon size={18} />
+              @_softking
+            </a>
+          </div>
+        </div>
+
+        <aside className="ig-widget">
+          <div className="ig-widget__header">
+            <InstagramIcon size={20} />
+            <div>
+              <p className="ig-widget__handle">@_softking</p>
+              <p className="ig-widget__label">Síguenos en Instagram</p>
+            </div>
+          </div>
+
+          <div className="ig-widget__feed">
+            {/*
+              TODO: reemplazar por el <iframe> real de SnapWidget.
+              1. Crear el widget en https://snapwidget.com con @_softking
+              2. Copiar el src que te entregan (https://snapwidget.com/embed/XXXXXX)
+              3. Pegarlo abajo en el atributo src
+            */}
+            <iframe
+              className="ig-widget__iframe"
+              src="https://snapwidget.com/embed/REPLACE_WITH_WIDGET_ID"
+              title="Feed de Instagram @_softking"
+              allowTransparency
+              scrolling="no"
+              loading="lazy"
+            />
+          </div>
+
           <a
-            className="btn btn--whatsapp"
-            href="https://wa.me/56948917116"
-            target="_blank"
-            rel="noopener"
-          >
-            <WhatsappIcon size={20} />
-            Cotiza por WhatsApp
-          </a>
-          <a
-            className="btn btn--ghost"
+            className="ig-widget__cta"
             href="https://instagram.com/_softking"
             target="_blank"
             rel="noopener"
           >
-            <InstagramIcon size={18} />
-            @_softking
+            Ver perfil completo
           </a>
-        </div>
+        </aside>
 
         <div className="highlights">
           {HIGHLIGHTS.map((item) => (
