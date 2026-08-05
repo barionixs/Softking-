@@ -1,6 +1,9 @@
+import { VideoEmbed } from "./VideoEmbed";
+
 const BLOG_POSTS = [
   {
     img: "/img/blog/bsod.jpg",
+    video: "gEokn055x_I",
     alt: "Pantalla azul de Windows (BSOD)",
     tag: "Hardware / Software",
     date: "10 jul 2026",
@@ -54,13 +57,17 @@ export function BlogSection() {
         <div className="blog-grid">
           {BLOG_POSTS.map((post) => (
             <article className="blog-card" key={post.title}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                className="blog-card__img"
-                src={post.img}
-                alt={post.alt}
-                loading="lazy"
-              />
+              {post.video ? (
+                <VideoEmbed videoId={post.video} title={post.title} />
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  className="blog-card__img"
+                  src={post.img}
+                  alt={post.alt}
+                  loading="lazy"
+                />
+              )}
               <div className="blog-card__body">
                 <div className="blog-card__head">
                   <span className="blog-card__tag">{post.tag}</span>
