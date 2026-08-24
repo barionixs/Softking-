@@ -12,6 +12,7 @@ export type Client = {
   phone: string | null;
   email: string | null;
   address: string | null;
+  rut: string | null;
   created_at: string;
 };
 
@@ -20,6 +21,7 @@ const ClientSchema = z.object({
   phone: z.string().trim().optional(),
   email: z.string().trim().optional(),
   address: z.string().trim().optional(),
+  rut: z.string().trim().optional(),
 });
 
 export type ClientFormState = { error?: string } | undefined;
@@ -46,18 +48,19 @@ export async function createClient(
     phone: formData.get("phone"),
     email: formData.get("email"),
     address: formData.get("address"),
+    rut: formData.get("rut"),
   });
 
   if (!validated.success) {
     return { error: validated.error.issues[0]?.message ?? "Datos inválidos." };
   }
 
-  const { name, phone, email, address } = validated.data;
+  const { name, phone, email, address, rut } = validated.data;
 
   const rows = await sql<
     { id: number }[]
-  >`INSERT INTO clients (name, phone, email, address)
-    VALUES (${name}, ${phone || null}, ${email || null}, ${address || null})
+  >`INSERT INTO clients (name, phone, email, address, rut)
+    VALUES (${name}, ${phone || null}, ${email || null}, ${address || null}, ${rut || null})
     RETURNING id`;
 
   revalidatePath("/admin");

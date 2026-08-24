@@ -156,6 +156,129 @@
   color: #ff6b6b;
   font-size: 13px;
 }
+.admin-form__hint {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+.admin-form__section {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
+  margin-top: 6px;
+}
+.admin-form__section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.admin-panel--form { max-width: 640px; }
+
+/* ===== Checklist ===== */
+.admin-checklist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+.admin-checklist__item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text);
+}
+.admin-checklist__item input { width: auto; }
+
+/* ===== Repuestos ===== */
+.admin-parts {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.admin-parts__row {
+  display: grid;
+  grid-template-columns: 2fr 80px 110px 32px;
+  gap: 8px;
+  align-items: center;
+}
+.admin-parts__row input {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: var(--text);
+  font-size: 13px;
+}
+.admin-parts__remove {
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text-dim);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+}
+.admin-parts__remove:hover { color: #ff6b6b; border-color: #ff6b6b; }
+.admin-parts__add {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 4px 0;
+}
+.admin-parts__add:hover { text-decoration: underline; }
+
+/* ===== Fotos ===== */
+.admin-photos {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.admin-photos__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.admin-photos__item {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+.admin-photos__item img { width: 100%; height: 100%; object-fit: cover; }
+.admin-photos__remove {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* ===== Timeline ===== */
+.admin-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.admin-timeline li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  color: var(--text-dim);
+}
 
 /* ===== Login ===== */
 .admin-login {
@@ -231,8 +354,14 @@
 .admin-report__actions {
   display: flex;
   justify-content: flex-end;
+  gap: 12px;
   margin-bottom: 20px;
 }
+.admin-report__extra {
+  max-width: 760px;
+  margin: 20px auto 0;
+}
+.admin-report__extra + .admin-report__extra { margin-top: 20px; }
 .admin-report {
   background: var(--bg-alt);
   border: 1px solid var(--line);
@@ -296,6 +425,37 @@
   font-size: 12px;
   text-align: center;
 }
+.admin-report__parts {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+.admin-report__parts th {
+  text-align: left;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  padding: 4px 8px 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+.admin-report__parts td {
+  font-size: 13px;
+  padding: 6px 8px 6px 0;
+  border-bottom: 1px solid var(--line);
+}
+.admin-report__photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.admin-report__photos img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+}
 
 @media print {
   .admin-shell__header,
@@ -316,6 +476,9 @@
     padding: 0;
     max-width: 100%;
   }
+  .admin-report__extra {
+    display: none !important;
+  }
   .admin-report__brand-sub,
   .admin-report__meta,
   .admin-report__section p,
@@ -323,6 +486,13 @@
     color: #333 !important;
   }
   .admin-badge { border-color: #999 !important; color: #000 !important; }
+  .admin-report__header,
+  .admin-report__footer,
+  .admin-report__parts th,
+  .admin-report__parts td {
+    border-color: #ccc !important;
+  }
+  .admin-report__photos img { border-color: #ccc !important; }
 }
 
 /* ===== Status badges ===== */
@@ -335,6 +505,10 @@
   border-radius: 999px;
   border: 1px solid var(--line);
 }
-.admin-badge--pending { color: var(--accent); border-color: rgba(255,122,26,0.4); }
-.admin-badge--in_progress { color: #f2c94c; border-color: rgba(242,201,76,0.4); }
-.admin-badge--done { color: var(--whatsapp); border-color: rgba(37,211,102,0.4); }
+.admin-badge--ingresado { color: var(--text-dim); border-color: var(--line); }
+.admin-badge--en_diagnostico { color: var(--accent); border-color: rgba(255,122,26,0.4); }
+.admin-badge--en_reparacion { color: #f2c94c; border-color: rgba(242,201,76,0.4); }
+.admin-badge--esperando_repuesto { color: #e07a5f; border-color: rgba(224,122,95,0.4); }
+.admin-badge--listo_para_retiro { color: #56ccf2; border-color: rgba(86,204,242,0.4); }
+.admin-badge--entregado { color: var(--whatsapp); border-color: rgba(37,211,102,0.4); }
+.admin-badge--sin_reparacion { color: #ff6b6b; border-color: rgba(255,107,107,0.4); }

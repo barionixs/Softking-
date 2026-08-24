@@ -24,6 +24,10 @@ export function NewClientForm() {
         <label htmlFor="address">Dirección</label>
         <input id="address" name="address" type="text" />
       </div>
+      <div className="admin-form__field">
+        <label htmlFor="rut">RUT</label>
+        <input id="rut" name="rut" type="text" placeholder="Opcional" />
+      </div>
       {state?.error && <p className="admin-form__error">{state.error}</p>}
       <button className="btn btn--whatsapp" type="submit" disabled={pending}>
         {pending ? "Guardando..." : "Agregar cliente"}
