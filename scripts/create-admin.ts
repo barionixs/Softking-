@@ -1,6 +1,7 @@
 import { config } from "dotenv";
 import bcrypt from "bcryptjs";
 import postgres from "postgres";
+import { cleanConnectionString } from "../lib/connection-string";
 
 config({ path: ".env.local" });
 
@@ -18,7 +19,7 @@ async function main() {
     process.exit(1);
   }
 
-  const sql = postgres(process.env.DATABASE_URL, {
+  const sql = postgres(cleanConnectionString(process.env.DATABASE_URL), {
     ssl: "require",
     prepare: false,
   });
