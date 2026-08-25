@@ -20,7 +20,8 @@ export default async function LoginPage() {
     <section className="admin-login">
       <div className="container admin-login__container">
         <div className="admin-login__card">
-          <p className="eyebrow">SoftKing</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="admin-login__logo" src="/img/logo-softking.png" alt="SoftKing" />
           <h1 className="admin-login__title">Panel privado</h1>
           <LoginForm />
         </div>

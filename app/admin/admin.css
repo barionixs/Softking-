@@ -171,7 +171,7 @@
   margin-top: 6px;
 }
 .admin-form__section:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
-.admin-panel--form { max-width: 640px; }
+.admin-panel--form { max-width: 640px; margin: 0 auto; }
 
 /* ===== Checklist ===== */
 .admin-checklist {
@@ -295,6 +295,19 @@
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 32px;
+  text-align: center;
+}
+.admin-login__logo {
+  height: 88px;
+  width: auto;
+  margin: 0 auto 20px;
+}
+.admin-login__card .admin-form {
+  align-items: center;
+}
+.admin-login__card .admin-form__field {
+  align-items: center;
+  width: 100%;
 }
 .admin-login__title {
   font-family: var(--font-display);
@@ -384,6 +397,16 @@
   padding-bottom: 20px;
   margin-bottom: 24px;
 }
+.admin-report__brand-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.admin-report__logo {
+  height: 40px;
+  width: auto;
+}
+.admin-report__logo--dark { display: none; }
 .admin-report__brand {
   font-family: var(--font-display);
   font-size: 20px;
@@ -484,6 +507,8 @@
   .admin-report__extra {
     display: none !important;
   }
+  .admin-report__logo--light { display: none; }
+  .admin-report__logo--dark { display: block !important; }
   .admin-report__brand-sub,
   .admin-report__meta,
   .admin-report__section p,

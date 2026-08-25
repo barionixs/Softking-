@@ -12,7 +12,6 @@ import {
   type FormaPago,
   type Accesorio,
 } from "@/lib/diagnostics";
-import { PrintButton } from "./PrintButton";
 import { PhotoUpload } from "./PhotoUpload";
 import { DeleteButton } from "./DeleteButton";
 
@@ -59,15 +58,31 @@ export default async function ReportePage({
         <Link href={`/admin/reportes/${d.id}/editar`} className="btn btn--ghost">
           Editar
         </Link>
-        <PrintButton />
+        <a href={`/api/reportes/${d.id}/pdf`} className="btn btn--whatsapp">
+          Descargar PDF
+        </a>
         <DeleteButton diagnosticId={d.id} />
       </div>
 
       <article className="admin-report">
         <header className="admin-report__header">
-          <div>
-            <p className="admin-report__brand">SoftKing Support</p>
-            <p className="admin-report__brand-sub">Soporte técnico &amp; desarrollo web</p>
+          <div className="admin-report__brand-block">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="admin-report__logo admin-report__logo--light"
+              src="/img/logo-softking.png"
+              alt="SoftKing"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              className="admin-report__logo admin-report__logo--dark"
+              src="/img/logo-softking-dark.png"
+              alt="SoftKing"
+            />
+            <div>
+              <p className="admin-report__brand">SoftKing Support</p>
+              <p className="admin-report__brand-sub">Soporte técnico &amp; desarrollo web</p>
+            </div>
           </div>
           <div className="admin-report__meta">
             <p>Folio N° {d.id}</p>
