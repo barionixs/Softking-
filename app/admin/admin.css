@@ -357,6 +357,11 @@
   gap: 12px;
   margin-bottom: 20px;
 }
+.admin-report__delete-btn {
+  color: #ff6b6b;
+  border-color: rgba(255,107,107,0.4);
+}
+.admin-report__delete-btn:hover { border-color: #ff6b6b; }
 .admin-report__extra {
   max-width: 760px;
   margin: 20px auto 0;

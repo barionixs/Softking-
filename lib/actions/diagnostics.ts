@@ -3,6 +3,7 @@
 import * as z from "zod";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { del } from "@vercel/blob";
 import { sql } from "@/lib/db";
 import { verifySession } from "@/lib/dal";
 import {
@@ -311,4 +312,32 @@ export async function deleteDiagnosticPhoto(photoId: number, diagnosticId: numbe
   await verifySession();
   await sql`DELETE FROM diagnostic_photos WHERE id = ${photoId}`;
   revalidatePath(`/admin/reportes/${diagnosticId}`);
+}
+
+export async function deleteDiagnostic(diagnosticId: number) {
+  await verifySession();
+
+  const [diagnostic] = await sql<
+    { client_id: number }[]
+  >`SELECT client_id FROM diagnostics WHERE id = ${diagnosticId}`;
+  if (!diagnostic) {
+    redirect("/admin/reportes");
+  }
+
+  const photos = await sql<
+    { url: string }[]
+  >`SELECT url FROM diagnostic_photos WHERE diagnostic_id = ${diagnosticId}`;
+  if (photos.length > 0) {
+    try {
+      await del(photos.map((p) => p.url));
+    } catch {
+      // best-effort cleanup; don't block deleting the record if Blob fails
+    }
+  }
+
+  await sql`DELETE FROM diagnostics WHERE id = ${diagnosticId}`;
+
+  revalidatePath(`/admin/clients/${diagnostic.client_id}`);
+  revalidatePath("/admin/reportes");
+  redirect("/admin/reportes");
 }

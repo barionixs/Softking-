@@ -14,6 +14,7 @@ import {
 } from "@/lib/diagnostics";
 import { PrintButton } from "./PrintButton";
 import { PhotoUpload } from "./PhotoUpload";
+import { DeleteButton } from "./DeleteButton";
 
 function formatDate(value: string | null, withTime = false) {
   if (!value) return null;
@@ -59,6 +60,7 @@ export default async function ReportePage({
           Editar
         </Link>
         <PrintButton />
+        <DeleteButton diagnosticId={d.id} />
       </div>
 
       <article className="admin-report">
