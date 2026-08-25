@@ -30,14 +30,14 @@ export async function decrypt(session: string | undefined = "") {
 }
 
 export async function createSession(userId: number, username: string) {
-  const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
   const session = await encrypt({ userId, username });
   const cookieStore = await cookies();
 
+  // No `expires`/`maxAge`: this makes it a session cookie, so the browser
+  // clears it on close and the user has to log in again next time.
   cookieStore.set("session", session, {
     httpOnly: true,
     secure: true,
-    expires: expiresAt,
     sameSite: "lax",
     path: "/",
   });
