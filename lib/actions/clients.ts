@@ -3,6 +3,7 @@
 import * as z from "zod";
 import { redirect } from "next/navigation";
 import { revalidatePath } from "next/cache";
+import { del } from "@vercel/blob";
 import { sql } from "@/lib/db";
 import { verifySession } from "@/lib/dal";
 
@@ -65,4 +66,34 @@ export async function createClient(
 
   revalidatePath("/admin");
   redirect(`/admin/clients/${rows[0].id}`);
+}
+
+export async function deleteClient(clientId: number) {
+  await verifySession();
+
+  const [client] = await sql<
+    { id: number }[]
+  >`SELECT id FROM clients WHERE id = ${clientId}`;
+  if (!client) {
+    redirect("/admin");
+  }
+
+  const photos = await sql<{ url: string }[]>`
+    SELECT p.url FROM diagnostic_photos p
+    JOIN diagnostics d ON d.id = p.diagnostic_id
+    WHERE d.client_id = ${clientId}`;
+  if (photos.length > 0) {
+    try {
+      await del(photos.map((p) => p.url));
+    } catch {
+      // best-effort cleanup; don't block deleting the record if Blob fails
+    }
+  }
+
+  // diagnostics (and their parts/photos/history) cascade via ON DELETE CASCADE
+  await sql`DELETE FROM clients WHERE id = ${clientId}`;
+
+  revalidatePath("/admin");
+  revalidatePath("/admin/reportes");
+  redirect("/admin");
 }

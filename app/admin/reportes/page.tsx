@@ -3,6 +3,7 @@ import { getAllDiagnostics } from "@/lib/actions/diagnostics";
 import { getClients } from "@/lib/actions/clients";
 import { STATUS_LABELS, TIPO_EQUIPO_LABELS, type TipoEquipo } from "@/lib/diagnostics";
 import { DiagnosticForm } from "@/app/admin/DiagnosticForm";
+import { DeleteButton } from "@/app/admin/reportes/[id]/DeleteButton";
 
 export default async function ReportesPage() {
   const [diagnostics, clients] = await Promise.all([
@@ -52,7 +53,10 @@ export default async function ReportesPage() {
                 </td>
                 <td>{new Date(d.created_at).toLocaleDateString("es-CL")}</td>
                 <td>
-                  <Link href={`/admin/reportes/${d.id}`}>Ver / Exportar</Link>
+                  <div className="admin-table__actions">
+                    <Link href={`/admin/reportes/${d.id}`}>Ver / Exportar</Link>
+                    <DeleteButton diagnosticId={d.id} />
+                  </div>
                 </td>
               </tr>
             ))}

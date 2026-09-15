@@ -43,7 +43,16 @@ export function DiagnosticForm({
   const d = diagnostic;
 
   return (
-    <form action={formAction} className="admin-form">
+    <form
+      className="admin-form"
+      onSubmit={(e) => {
+        // React resets uncontrolled form fields after a form-action submission
+        // completes, even when the action returns a validation error instead of
+        // throwing. Dispatching manually here avoids wiping the user's input.
+        e.preventDefault();
+        formAction(new FormData(e.currentTarget));
+      }}
+    >
       {clientId ? (
         <input type="hidden" name="client_id" value={clientId} />
       ) : (
