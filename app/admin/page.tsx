@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getClients } from "@/lib/actions/clients";
 import { NewClientForm } from "./NewClientForm";
+import { DeleteClientButton } from "./DeleteClientButton";
 
 export default async function AdminDashboard() {
   const clients = await getClients();
@@ -17,12 +18,13 @@ export default async function AdminDashboard() {
                 <th>Nombre</th>
                 <th>Teléfono</th>
                 <th>Email</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
               {clients.length === 0 && (
                 <tr>
-                  <td colSpan={3} className="admin-table__empty">
+                  <td colSpan={4} className="admin-table__empty">
                     Todavía no hay clientes registrados.
                   </td>
                 </tr>
@@ -36,6 +38,14 @@ export default async function AdminDashboard() {
                   </td>
                   <td>{client.phone || "—"}</td>
                   <td>{client.email || "—"}</td>
+                  <td>
+                    <div className="admin-table__actions">
+                      <DeleteClientButton
+                        clientId={client.id}
+                        clientName={client.name}
+                      />
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>

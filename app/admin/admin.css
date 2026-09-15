@@ -375,6 +375,17 @@
   border-color: rgba(255,107,107,0.4);
 }
 .admin-report__delete-btn:hover { border-color: #ff6b6b; }
+.admin-table__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.admin-table__actions .admin-report__delete-btn {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
 .admin-report__extra {
   max-width: 760px;
   margin: 20px auto 0;
